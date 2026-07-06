@@ -246,7 +246,35 @@ section {
 .hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 48px;
+  align-items: center;
+  max-width: 940px;
+}
+
+@media (max-width: 760px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-photo { justify-self: center; order: -1; }
+}
+
+.hero-photo {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .hero h1 span {
@@ -421,6 +449,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .contact-row {
