@@ -247,10 +247,10 @@ section {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: 1fr 300px;
   gap: 48px;
   align-items: center;
-  max-width: 940px;
+  max-width: 1020px;
 }
 
 @media (max-width: 760px) {
@@ -262,9 +262,9 @@ section {
 }
 
 .hero-photo {
-  width: 220px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
+  width: 300px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
   overflow: hidden;
   border: 6px solid var(--white);
   box-shadow: var(--shadow-soft);
